@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 import GlobalTransfer from "../components/GlobalTransfer"
 import DownloadSection from "../components/DownloadSection"
 import Dashboard from "../components/Dashboard"
-import Secure from "../components/Secure"
+import Features from "../components/Features"
 
 const Home = () => {
 
@@ -15,7 +15,7 @@ const Home = () => {
                 <Header />
                 <GlobalTransfer />
                 <Dashboard />
-                <Secure />
+                <Features />
                 <DownloadSection />
                 <Footer />
             </Container>

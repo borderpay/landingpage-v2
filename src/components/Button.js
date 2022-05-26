@@ -23,7 +23,7 @@ const Buttons = styled.div`
         margin-right: auto;
         margin-top: 40px;
         color: white;
-        background-color: #5ccdff;
+        background-color: #30009C;
         padding: 18px;
         border-radius: 7px;
         font-size: 16px;

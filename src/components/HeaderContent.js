@@ -1,100 +1,67 @@
-import React from 'react'
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment } from 'react'
 import styled from "styled-components"
-import { Fade } from 'react-reveal'
-import Typical from "react-typical"
-import phone from "../images/phone.png"
-import desktop from "../images/desktop.svg"
-import Button from "./Button"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Converter from "./Converter"
 
-const HeaderContent = () => {
-    return (
-        <div>
-            <Container>
-                <Fade right>
-                    <Content>
-                        <h1><Typical loop={Infinity} wrapper="b" steps={['Lightning transactions', 1500, 'Seamless payments', 1500, 'Go beyond..', 1500]} /></h1>
+export default function Example() {
+  return (
+    <div className="relative bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+            <div className="sm:text-center lg:text-left">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                <span className="block xl:inline">Simplifying Global</span>{' '}
+                <span className="block text-indigo-600 xl:inline">Payments</span>
+              </h1>
+              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                Faster, easier, and cheaper cross border payments starts here.
+              </p>
 
-                        <p>Sending money to loved ones and business partners internationally shouldn't be a hassle!<br /> <br /> With Borderpay, make trans-border payments in split seconds, Go beyond.</p>
+            <Features>
+                <ul>
+                    <li>
+                        <FontAwesomeIcon className="icon" icon={faCheck} /> Licensed and Regulated
+                    </li>
+                    <li>
+                        <FontAwesomeIcon className="icon" icon={faCheck} /> 100% transparent
+                    </li>
+                    <li>
+                        <FontAwesomeIcon className="icon" icon={faCheck} /> Across 180+ countries
+                    </li>
+                </ul>
 
-                        <Button name={"Download Now"} />
-                    </Content>
-                </Fade>
-
-                <Fade left>
-                    <Image>
-                        <img className="phone" src={phone} width="800" alt="borderpay" />
-                        <img className="desktop" src={desktop} width="800" alt="borderpay" />
-                    </Image>
-                </Fade>
-            </Container>
+                <ul>
+                    <li>
+                        <FontAwesomeIcon className="icon" icon={faCheck} /> Hassle Free
+                    </li>
+                    <li>
+                        <FontAwesomeIcon className="icon" icon={faCheck} /> MultiCurrency Wallet
+                    </li>
+                </ul>
+            </Features>
+              
+            </div>
+          </main>
         </div>
-    )
+      </div>
+      <div className="lg:absolute lg:inset-y-0 lg:right-10 lg:mr-10">
+        <Converter />
+      </div>
+    </div>
+  )
 }
 
-export default HeaderContent
+const Features = styled.div `
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    font-weight: bold;
 
-const Container = styled.div`
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    min-height: 100vh;
-
-    @media(max-width: 960px){
-        display: block;
-    }
-
-`
-
-const Content = styled.div`
-    margin-top: 70px;
-    margin-left: 30px;
-    text-align: center;
-
-    h1{
-        font-size: 60px;
-        font-weight: 800;
-        color: #5ccdff;
-
-        @media(max-width: 960px){
-            font-size: 28px;
-            text-align: center;
-            color: white;
-        }
-    }
-    p{
-        margin-top: 20px;
-        font-size: 25px;
-
-        @media(max-width: 960px){
-            color: white;
-            font-size: 18px;
-            text-align: center;
-        }
-    }
-`
-
-const Image = styled.div`
-    display: flex;
-    position: relative;
-
-    .phone{
-        position: absolute;
-        right: 0; 
-        z-index: 999;
-    }
-
-    @media(max-width: 960px){
-        margin-top: 40px;
-
-        .desktop{
-            height: 400px;
-            width: 100%;
-        }
-
-        .phone{
-            right: -20px;
-            height: 500px;
-            width: 400px;
-        }
+    .icon{
+        color: green;
+        font-weight: bold;
     }
 `

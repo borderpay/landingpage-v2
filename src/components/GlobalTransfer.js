@@ -1,17 +1,22 @@
 import React from 'react'
 import styled from "styled-components"
-import global from "../images/kyc.webp"
+import { Fade } from 'react-reveal'
+import global from "../images/global.svg"
 
 const GlobalTransfer = () => {
     return (
         <div>
             <Container>
-                <img className="lg-devices-global" src="https://media.istockphoto.com/photos/excited-black-man-feel-overjoyed-reading-good-news-on-cellphone-picture-id1201144419?k=20&m=1201144419&s=612x612&w=0&h=Hz284upAY5zWEkHo5Go-gqNzZucjeCHrCT77MUodG3Q=" />
+                <Fade right>
+                    <img className="lg-devices-global" src={global} />
+                </Fade>
 
                 <Content>
-                    <h1>Make global transfers</h1>
-                    <img src="https://media.istockphoto.com/photos/excited-black-man-feel-overjoyed-reading-good-news-on-cellphone-picture-id1201144419?k=20&m=1201144419&s=612x612&w=0&h=Hz284upAY5zWEkHo5Go-gqNzZucjeCHrCT77MUodG3Q=" className="sm-devices-global" />
-                    <p>They say the internet has made the World a global village! but transfer of money within Countries has still not been an easy feat..<br /> <br /> With Borderpay, we provide you a means to make trans-border payments in split seconds.</p>
+                    <Fade down>
+                        <h1>Make global transfers</h1>
+                        <img src={global} className="sm-devices-global" />
+                        <p>They say the internet has made the World a global village! but transfer of money within Countries has still not been an easy feat..<br /> <br /> With Borderpay, we provide you a means to make trans-border payments in split seconds.</p>
+                    </Fade>
                 </Content>
             </Container>
         </div>
@@ -21,7 +26,10 @@ const GlobalTransfer = () => {
 export default GlobalTransfer
 
 const Container = styled.div`
-    padding: 40px 50px 10px 50px;
+    background: #23036A;
+    color: white;
+    margin-top: 5rem;
+    padding: 70px;
     display: flex;
     justify-content: space-between;
 
@@ -36,7 +44,9 @@ const Container = styled.div`
     }
 
     @media(max-width: 960px){
+        background: white;
         display: block;
+        margin-top: -3rem;
         padding: 30px 0px 10px 0px;
 
         .lg-devices-global{
@@ -63,22 +73,22 @@ const Content = styled.div`
     h1{
         font-size: 40px;
         font-weight: 800;
-        color: #5ccdff;
+        color: white;
         margin-bottom: 10px;
 
         @media(max-width: 960px){
             font-size: 30px;
             text-align: center;
-            color: #5ccdff;
+            color: blue;
             margin-bottom: 20px;
         }
     }
 
     p{
-        font-size: 25px;
+        font-size: 20px;
 
         @media(max-width: 960px){
-            font-size: 20px;
+            font-size: 17px;
             color: black;
             text-align: center;
         }

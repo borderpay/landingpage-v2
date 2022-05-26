@@ -1,124 +1,103 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faDiscord, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import logo from "../images/logo.png"
+import React from "react";
+import {
+    Box,
+    Container,
+    Row,
+    Column,
+    FooterLink,
+    Heading,
+} from "./FooterStyles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    
+    faInstagram,
+    faTwitter,
+    faLinkedin,
+    faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
-function Footer() {
+import logo from "../images/logo.png";
+
+const Footer = () => {
     return (
-        <FooterStyled>
-                <div className="footer-con">
-                    <div className="logo-con">
-                       <div className="logo-items">
-                        <img src={logo} width="180" />
-                       </div>
-                    </div>
-                    <ul className="botton-nav">
-                        <div className="links1">
-                            <h1>Socials</h1>
-                            <li>
-                                <FontAwesomeIcon className="icon" icon={faLinkedin} /><a href="#">LinkedIn</a>
-                            </li>
-                            <li>
-                                <FontAwesomeIcon className="icon" icon={faDiscord} /><a href="#">Discord</a>
-                            </li>
-                            <li>
-                                <FontAwesomeIcon className="icon" icon={faInstagram} /><a href="#">Instagram</a>
-                            </li>
-                        </div>
-                        <div className="links2">
-                            <h1>Support</h1>
-                            <li>
-                                <a href="#">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="#">Tickets</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact us</a>
-                            </li>
-                        </div>
-                        <div className="links3">
-                            <h1>Company</h1>
-                            <li>
-                                <a href="#">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-        </FooterStyled>
-    )
-}
+        <div>
+            <Box>
+                <Container>
+                    <Row>
+                        <Column>
+                            <img src={logo} width="180" alt="borderpay-logo" />
+                        </Column>
+                        <Column>
+                            <Heading>About Us</Heading>
+                            <FooterLink href="#">BorderPay</FooterLink>
+                            <FooterLink href="#">FAQ's</FooterLink>
+                            <FooterLink href="#">Contact Us</FooterLink>
+                        </Column>
+                        <Column>
+                            <Heading>Company</Heading>
+                            <FooterLink href="#">Privacy Policy</FooterLink>
+                            <FooterLink href="#">Terms & Conditions</FooterLink>
+                            <FooterLink href="#">Blog</FooterLink>
+                        </Column>
 
-const FooterStyled = styled.footer`
-    padding: 0 18rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: black;
-    color: white !important;
-    font-weight: bold;
+                        <Column>
+                            <Heading>We're Social</Heading>
+                            <FooterLink href="https://www.twitter.com/borderpay">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faTwitter}
+                                />
+                                <span href="#" style={{ marginLeft: "10px" }}>
+                                    Twitter
+                                </span>
+                            </FooterLink>
+                            <FooterLink href="https://www.instagram.com/borderpay">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faInstagram}
+                                />
+                                <span href="#" style={{ marginLeft: "10px" }}>
+                                    Instagram
+                                </span>
+                            </FooterLink>
+                            <FooterLink href="https://www.facebook.com/borderpay">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faFacebook}
+                                />
+                                <span href="#" style={{ marginLeft: "10px" }}>
+                                    Facebook
+                                </span>
+                            </FooterLink>
+                            <FooterLink href="https://www.linkedin.com/company/borderpay">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={faLinkedin}
+                                />
+                                <span href="#" style={{ marginLeft: "10px" }}>
+                                    LinkedIn
+                                </span>
+                            </FooterLink>
+                        </Column>
+                    </Row>
+                </Container>
+            </Box>
 
-    @media screen and (max-width: 1347px){
-        padding: 5rem 14rem;
-    }
-    @media screen and (max-width: 1186px){
-        padding: 5rem 8rem;
-    }
-    @media screen and (max-width: 990px){
-        padding: 5rem 4rem;
-        text-align: center;
-    }
-    .footer-con{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        @media(max-width: 960px){
-            display: block !important;
-        }
-    }
-
-    .logo-con{
-        display: flex;
-        align-items: center;
-        font-size: 30px;
-        font-weight: bold;
-
-        @media(max-width: 960px){
-            display: none;
-        }
-    }
-
-    .botton-nav{
-        display: flex;
-        justify-content: space-between;
-        li{
-            list-style-type: none;
-            padding: 2rem 0;
-            color: #16194F;
-            
-            a{
-                text-decoration: none;
-                color: white;
-                font-size: 20px;
-            }
-
-            .icon{
-                color: white;
-                padding-right: 15px;
-                font-size: 20px;
-            }
-        }
-
-        @media(max-width: 960px){
-            display: block !important;
-        }
-    }
-`;
-
-export default Footer
+            <div
+                style={{
+                    backgroundColor: "black",
+                    display: "flex",
+                    justifyContent: "center",
+                }}
+            >
+                <span
+                    href="https://www.linkedin.com/company/borderpay"
+                    style={{ color: "white" }}
+                >
+                    Copyright © 2022 BorderPay Inc.
+                </span>
+            </div>
+        </div>
+    );
+};
+export default Footer;

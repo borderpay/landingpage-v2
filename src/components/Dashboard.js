@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import phone from "../images/dashboard.png"
+import { Fade } from 'react-reveal'
+import phone from "../images/transaction.webp"
 import circles from "../images/circleBg.svg"
 
 const Dashboard = () => {
@@ -8,17 +9,23 @@ const Dashboard = () => {
         <div>
             <Container>
                 <img className="bg1" src={circles} />
+                
                 <Content>
-                    <h1>An easy and intuitive Dashboard</h1>
-                    <img src={phone} className="sm-devices-global" />
-                    <p>
-                        Our user's dashboard was built with simplicity in mind..
-                        <br /><br />
-                        From the onboarding process to using our available services, navigate through our available services with ease and comfort.
-                    </p>
+                    <Fade right>
+                        <h1>Simple Dashboard</h1>
+                        <img src={phone} className="sm-devices-global" />
+                        <p>
+                            Our user's dashboard was built with simplicity in mind..
+                            <br /><br />
+                            From the onboarding process to using our available services, navigate through our available services with ease and comfort.
+                        </p>
+                    </Fade>
                 </Content>
 
-                <img className="lg-devices-global" src={phone} />
+                <Fade left>
+                    <img className="lg-devices-global" src={phone} />
+                </Fade>
+                
                 <img className="bg2" src={circles} />
             </Container>
         </div>
@@ -29,7 +36,7 @@ export default Dashboard
 
 const Container = styled.div`
     position: relative;
-    padding: 40px 50px 10px 50px;
+    padding: 100px 50px 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,16 +64,17 @@ const Container = styled.div`
 
     @media(max-width: 960px){
         display: block;
-        padding: 30px 0px 10px 0px;
+        padding: 0px 0px 10px 0px;
 
         .lg-devices-global{
             display: none;
         }
 
         .sm-devices-global{
+            border-radius: 40px;
             display: block;
             width: 250px;
-            height: 400px;
+            height: 350px;
             margin-right: auto;
             margin-left: auto;
         }
@@ -95,22 +103,23 @@ const Content = styled.div`
     h1{
         font-size: 40px;
         font-weight: 800;
-        color: #5ccdff;
+        color: blue;
         margin-bottom: 10px;
 
         @media(max-width: 960px){
             font-size: 30px;
             text-align: center;
-            color: #5ccdff;
+            color: blue;
             margin-bottom: 20px;
         }
     }
 
     p{
-        font-size: 25px;
+        font-size: 20px;
 
         @media(max-width: 960px){
-            font-size: 20px;
+            margin-top: 40px;
+            font-size: 17px;
             color: black;
             text-align: center;
         }
