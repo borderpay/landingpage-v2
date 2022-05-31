@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
 import HeaderContent from "../components/HeaderContent"
-import bg from "../images/bg.jpg"
 import Navbar from "./Navbar"
 
 const Header = () => {
