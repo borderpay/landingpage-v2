@@ -96,36 +96,36 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
-    margin-left: 7rem;
-    margin-right: 4rem;
-    margin-top: 5rem;
+  margin-left: 7rem;
+  margin-right: 4rem;
+  margin-top: 5rem;
 
-    h1{
-        font-size: 40px;
-        font-weight: 800;
-        color: blue;
-        margin-bottom: 10px;
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #23036a;
+    margin-bottom: 10px;
 
-        @media(max-width: 960px){
-            font-size: 30px;
-            text-align: center;
-            color: blue;
-            margin-bottom: 20px;
-        }
+    @media (max-width: 960px) {
+      font-size: 30px;
+      text-align: center;
+      color: blue;
+      margin-bottom: 20px;
     }
+  }
 
-    p{
-        font-size: 20px;
+  p {
+    font-size: 20px;
 
-        @media(max-width: 960px){
-            margin-top: 40px;
-            font-size: 17px;
-            color: black;
-            text-align: center;
-        }
+    @media (max-width: 960px) {
+      margin-top: 40px;
+      font-size: 17px;
+      color: black;
+      text-align: center;
     }
+  }
 
-    @media(max-width: 960px){
-        margin: 2rem;
-    }
-`
+  @media (max-width: 960px) {
+    margin: 2rem;
+  }
+`;
