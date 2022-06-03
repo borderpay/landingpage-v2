@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import HeaderContent from "../components/HeaderContent"
+import HeaderContent from "./HeaderContent"
 import Navbar from "./Navbar"
 
 const Header = () => {
