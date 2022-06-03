@@ -7,20 +7,23 @@ import DownloadSection from "../components/DownloadSection"
 import Dashboard from "../components/Dashboard"
 import Features from "../components/Features"
 
+
+
 const Home = () => {
 
-    return(
-        <div>
-            <Container>
-                <Header />
-                <GlobalTransfer />
-                <Dashboard />
-                <Features />
-                <DownloadSection />
-                <Footer />
-            </Container>
-        </div>
-    )
+
+  return (
+    <div>
+      <Container>
+        <Header />
+        <GlobalTransfer />
+        <Dashboard />
+        <Features />
+        <DownloadSection />
+        <Footer />
+      </Container>
+    </div>
+  );
 }
 
 export default Home
