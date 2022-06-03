@@ -69,7 +69,6 @@ function Converter() {
     <div>
       <Container>
         <div className="flex justify-evenly">
-            
           <input
             type="number"
             className="from"
@@ -108,7 +107,7 @@ function Converter() {
           <input
             type="text"
             className="to"
-            value={data.result ? data.result : "you receive"}
+            value={data.result ? data.result : "Receive"}
             readonly
           />
           <img src={toFlag} className="currency-img" alt="currency" />
@@ -145,13 +144,13 @@ export default Converter;
 const Container = styled.div`
   width: 450px;
   height: 550px;
-  background: white;
+  background: #ffffff;
   border-radius: 15px;
   margin-top: 50px;
   padding: 20px;
   margin-right: 130px;
-  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-  box-shadow: 10px 8px 6px #b8b9be, -3px -3px 6px #b8b9be;
+  -webkit-box-shadow: 0px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+  box-shadow: 0px 3px 6px #b8b9be, -0px -3px 3px #ffffff;
 
   div {
     // display: flex;
@@ -160,12 +159,12 @@ const Container = styled.div`
 
     margin: auto;
     width: 95%;
-    height: 65px;
-    border: 2px solid gainsboro;
+    height: 70px;
+    border: 0px solid gainsboro;
     border-radius: 7px;
-    background: whitesmoke;
-    -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-    box-shadow: 0px 8px 6px #b8b9be, -3px -3px 6px #b8b9be;
+    background: #fbfbfd;
+    -webkit-box-shadow: 0px 3px 6px #b8b9be, -0px -3px 6px #b8b9be;
+    box-shadow: 0px 3px 6px #b8b9be, -0px -3px 3px #b8b9be;
 
     @media (max-width: 960px) {
       height: 70px;
@@ -202,11 +201,11 @@ const Container = styled.div`
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    background: white;
+    background: #ffffff;
   }
 
   .button {
-    background: #14b848;
+    background: #27bc77;
     color: white;
     width: 93%;
     height: 60px;
@@ -238,7 +237,7 @@ const Container = styled.div`
 
     span {
       font-weight: bold;
-    //   background: red;
+      // background: red;
       span {
         background: gainsboro;
         border-radius: 50%;
@@ -253,7 +252,7 @@ const Container = styled.div`
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 90%;
-    height: 400px;
+    width: 70%;
+    height: 500px;
   }
 `;
